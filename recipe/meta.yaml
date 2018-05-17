@@ -1,10 +1,10 @@
 {% set provider= "OneAndOne" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "ef27d118089f409aeee450539c0873bc6b099cb1b1ced659ae989b62fbbff0fa" %}
+{% set sha256 = "81633ee10d0b2eb0cda4234bd717a3f3d37f6e1a5d836e01926baa60bfab6c4e" %}
 {% set sha256_win32 = "8f3fa5366698e8ffdd15f54dc34f1210d1878926623ec9d92feb63d9e0d24be0" %}
 {% set sha256_win64 = "b1ebaf6141fcca9139cf1235556fc355269141a107fa4ed02d42d09ab6a9c71c" %}
 
