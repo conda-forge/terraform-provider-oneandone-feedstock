@@ -1,12 +1,11 @@
-{% set provider= "OneAndOne" %}
+{% set provider = "OneAndOne" %}
 {% set version = "1.1.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
 {% set sha256 = "81633ee10d0b2eb0cda4234bd717a3f3d37f6e1a5d836e01926baa60bfab6c4e" %}
-{% set sha256_win32 = "8f3fa5366698e8ffdd15f54dc34f1210d1878926623ec9d92feb63d9e0d24be0" %}
-{% set sha256_win64 = "b1ebaf6141fcca9139cf1235556fc355269141a107fa4ed02d42d09ab6a9c71c" %}
+{% set sha256_win64 = "86101847861663c272e7bfc7c98ae800a2ee443507a4199735a74d3356a473b6" %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +16,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz  # [not win]
   sha256: {{ sha256 }}  # [not win]
 
-  url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_386.zip  # [win32]
   url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
   fn: {{ name }}-{{ version }}.zip  # [win]
-  sha256: {{ sha256_win32 }}  # [win32]
   sha256: {{ sha256_win64 }}  # [win64]
 
 build:
@@ -46,7 +43,7 @@ about:
   license: MPL 2.0
   summary: The Terraform 1&1 provider
   doc_url: https://www.terraform.io/docs/providers/{{ provider|lower }}/index.html
-  dev_url: https://https://github.com/terraform-providers/{{ name }}
+  dev_url: https://github.com/terraform-providers/{{ name }}
 
 extra:
   recipe-maintainers:
